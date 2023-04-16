@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Чат</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <section class="chat">
+      <h1 class="visually-hidden">Чат</h1>
+      <div class="choose-variant">
+        <button class="choose-button-me choose-button-true" type="submit">Я</button>
+        <button class="choose-button-other" type="submit">Моя шиза</button>
+      </div>
+
+      <div class="scroller">
+        <div class="scroller-content" id="scrollerContent">
+        </div>
+      </div>
+      <form class="chat-form" method="post">
+        <input class="chat-form-input" type="text" aria-label="Ваше сообщение" placeholder="Напишите что-нибудь" required>
+        <button class="chat-form-button" type="submit">Отправить</button>
+      </form>
+    </section>
+
+    <template id="message-template">
+      <div class="chat-message" tabindex="0">
+        <span class="chat-message-name"></span>
+        <p class="chat-message-text"></p>
+        <p class="chat-message-time"></p>
+        <button class="chat-message-button" type="button">Удалить</button>
+      </div>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
